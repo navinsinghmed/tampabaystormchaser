@@ -1,0 +1,140 @@
+
+#Satellite_Ian {
+    width: 500px;
+    height: 500px;
+}
+
+.Intro_Opener {
+    font-style:oblique;
+    background-color: rgb(36, 3, 36);
+}
+
+nav a {
+    color:rgb(190, 216, 190);
+    border: 3px solid black;
+    transition: color 0.5s ease-in, background-color 0.5s ease-in;
+}
+
+/*Attribute Selector- If conflict- most specific assignment wins
+Element, then class, then ID most specific*/
+
+input[type="email"] {
+    background-color:darkmagenta;
+}
+
+/*When hovering over a link to another site, 
+change color of link on webpage*/
+
+nav a:hover {
+    color:beige;
+    background-color: blueviolet;
+}
+
+/*Non=specific Element selector*/
+h4 + p {
+    color:rgb(238, 144, 172);
+    font-size:x-large;
+    background-color: black;
+}
+
+h2 {
+    color:lightcyan;
+    background-color:rgba(200,0,100,.5);
+    text-align:center;
+    font-family:Ariel Black;
+    text-decoration-line: underline;
+    text-decoration-style:wavy; 
+}
+
+/*Class Selector, more specific than element*/
+.year_hurricane_list {
+    color:rgb(252, 252, 153);
+}
+
+
+body {
+    color:yellow;
+    background: radial-gradient(cyan,purple);
+}
+
+a {
+    color:white;
+    font-weight:800;
+}
+
+p{
+    font-weight:600;
+    line-height:2;
+    font-size:20px;
+}
+
+/*Pseudo-Element*/
+
+p::first-letter {
+    font-size: 2em;
+}
+
+#consecutive_years {
+    border: 1px solid white;
+    width: 50%;
+    margin: 0 auto;
+    background-color: rgb(41, 7, 35);
+}
+
+#consecutive_years section {
+    width: 400px;
+    border: 3px solid lightpink;
+    text-align: center;
+}
+
+h3 {
+    font-size:25px;
+    color:white;
+    text-transform:capitalize;
+    text-shadow:1px -1px lightskyblue;
+    border-style: solid;
+    border-color: blue;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+/*ID selection, adding border*/
+
+#2021_Hurricane_Container {
+    border: 1px solid black;
+    border-width: 15px;
+}
+
+/*Class within ID Selection, adding border and margin*/
+#2021_Hurricane_Container .hurricane_item_2021 {
+    height: 10 px;
+    border: 2 px orangered;
+    margin: 1em;
+}
+
+
+
+/*Pseudo-Classes*/
+
+li:nth-of-type(2n) {
+    background-color:rgb(52, 11, 90);
+}
+
+li:nth-of-type(2n+1) {
+    background-color:rgb(77, 4, 4);
+}
+
+/*Every list element on the page*/
+li {
+    font-weight: bold;
+}
+
+/*CSS colors and style*/
+
+/*border*/
+img {
+    width: 30%;
+    border-color: red;
+    border-width: 10px;
+    border-style: groove solid groove solid;
+}
