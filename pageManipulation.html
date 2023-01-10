@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Tampa Bay Hurricanes</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main><h1>Hurricanes of 2017 Onward</h1></main>
+    
+    <form id = "HurricaneForm">
+        <input type="text" placmholder="Hurricanes 2017-2022">
+        <input type="submit">
+    </form>
+    <br>
+    <br>
+    <form action="" id="logoform">
+        <p>
+            <label for="">Enter a Hurricane Name:
+                <input type="text" placeholder="Hurricane Name" name="Name_Hurricane">
+            </label>
+        </p>
+        <p>
+            <label for="">Enter A Wind Speed (mph):
+                <input type="text" placeholder="Hurricane Wind Speed" name="MaxVelocity">
+            </label>
+        </p>
+        <p>
+            <label for="">Enter a Color:
+                <input type="color" name="color">
+            </label>
+        </p>
+        <p>
+            <label for="">Select Font Size:
+                <input type="range" name="fontsize" min="10" max="200">
+            </label>
+        </p>
+        <input type="Submit">
+    </form>
+    <section id="results"></section>
+    
+    <script src="pageManip.js"></script>
+</body>
+</html>
