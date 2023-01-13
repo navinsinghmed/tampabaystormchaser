@@ -33,3 +33,42 @@ function makeHurricane(text1, text2, color, size) {
     HurricaneData.style.fontSize = size + 'px';
     return HurricaneData;
 }
+
+
+document.addEventListener('keypress', function(e) {
+   console.log(e.key); 
+});
+
+const removeButtons = document.querySelectorAll('li button');
+
+for(let btn of removeButtons) {
+    btn.addEventListener('click', function(e) {
+        e.target.parentElement.remove();       
+    });   
+}
+
+const form_Hurricane = document.querySelector('#add_hurricane');
+const form_Input_Hurricane = document.querySelector('#Hurricane_Name_In_Form');
+const Hurricane_Name_List_Result = document.querySelector('#hurricane_recent_list');
+
+form_Hurricane.addEventListener('submit', function(e) {
+   e.preventDefault();
+   console.log(form_Input_Hurricane.value);
+   const new_Hurricane_Name = document.createElement('li');
+   const removeBtn = document.createElement("button");
+   removeBtn.innerText = 'Remove Hurricane Name?';
+   removeBtn.addEventListener('click', function(e_added_button) {
+       e_added_button.target.parentElement.remove();
+   });
+   new_Hurricane_Name.innerText = form_Input_Hurricane.value;
+   new_Hurricane_Name.appendChild(removeBtn);
+   form_Input_Hurricane.value = ''; 
+   Hurricane_Name_List_Result.appendChild(new_Hurricane_Name);
+});
+
+const ul_data = document.querySelector('#worst_hurricanes_ul_id');
+ul_data.addEventListener('click', function(e) {
+   console.log(e.target.getAttribute('data-year'));
+   console.log(e.target.dataset);
+   console.log(e.target.dataset.category); 
+});
