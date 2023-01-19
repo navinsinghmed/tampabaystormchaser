@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Generator</title>
+    <link rel="stylesheet" href="meme_generator.css">    
+</head>
+<body>
+    <div class="introduction">
+        <h1>Generate your Memes on this page.</h1>
+    </div>
+    <br>
+    <br>
+        <form id="meme_input_data">
+            <div class="meme_img_div_class">
+                <label for="meme_picture_link" class="meme_pic_link_label_class">Paste URL Here:</label>
+                <input type="url" class="link_inputted_class" id="link_inputted_id" placeholder="Meme URL put here" required>
+            </div>
+        
+            <div class="text_top_div_class">
+                <label for="top_meme_text" class="top_meme_text_label_class">Text On Top of Meme:</label>
+                <input type="text" class="meme_text_top_input_class" id="meme_text_top_input_id" placeholder="Place Top Meme Text Here if you Choose">       
+            </div>
+            
+            <div class="text_bottom_div_class">
+                <label for="bottom_meme_text" class="bottom_meme_text_label_class">Text On Bottom of Meme:</label>
+                 <input type="text" class="meme_text_bottom_input_class" id="meme_text_bottom_input_id" placeholder="Place Bottom Meme Text Here if you Choose">    
+            </div>
+            
+            <div class="meme_generator_button_div_class">
+                <button class="meme_button_class" type="button">Generate Your Meme!</button>
+            </div>
+        </form>
+    
+    <section class="gallery_of_memes">
+        <ul class="meme_gallery_ul_class">
+        </ul>
+    </section>
+
+<script src="meme_generator.js"></script>
+</body>
+</html>
