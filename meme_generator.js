@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
        
        let topMemeText = document.getElementById("meme_text_top_input_id");
        let imageInput = document.getElementById("link_inputted_id").value,
-       src = urlInput;
+       src = imageInput;
        img = document.createElement('img');
        img.src = src;
        
