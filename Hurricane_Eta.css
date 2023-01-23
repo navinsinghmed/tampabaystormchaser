@@ -1,0 +1,54 @@
+h1 {
+    font-weight: 500;
+    background-color: aquamarine;
+}
+
+#Submit_Hurricane_ID {
+    border-radius: 5px;
+    border-color: rgb(13, 169, 216);
+    border-style: double;
+    font-size: 3rem;
+    background-color: purple;
+    color:yellow;
+}
+
+.Hurricane_Image_Container {
+    position: relative;
+    text-align: center;
+    min-width: 500px;
+}
+
+.Hurricane_Image_Class {
+    width: 500px;
+}
+
+.label_text {
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    text-shadow: 2px 2px purple;
+}
+
+.name_text {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.category_text {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.delete_button_class {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    background-color: red;
+    color: white;
+    transform: translate(-50%, -50%);    
+}
+
