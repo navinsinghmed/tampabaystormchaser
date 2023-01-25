@@ -1,0 +1,69 @@
+navin@DESKTOP-FRHHJSP:~$ ls
+2017_Hurricanes      2020_Hurricanes  2021_Hurricanes  Irma142.txt        hurricanes      walrus
+2020_Big_Hurricanes  2021             Hurricanes       hurricane_man.txt  index_git.html
+navin@DESKTOP-FRHHJSP:~$ mkdir learn_git_again
+navin@DESKTOP-FRHHJSP:~$ cd mkdir_learn_git_again
+-bash: cd: mkdir_learn_git_again: No such file or directory
+navin@DESKTOP-FRHHJSP:~$ cd mkdir learn_git_again
+-bash: cd: too many arguments
+navin@DESKTOP-FRHHJSP:~$ cd learn_git_again
+navin@DESKTOP-FRHHJSP:~/learn_git_again$ touch third.txt
+navin@DESKTOP-FRHHJSP:~/learn_git_again$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in /home/navin/learn_git_again/.git/
+navin@DESKTOP-FRHHJSP:~/learn_git_again$ git add third.txt
+navin@DESKTOP-FRHHJSP:~/learn_git_again$ git commit -m "adding third.txt"
+[master (root-commit) c512654] adding third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+navin@DESKTOP-FRHHJSP:~/learn_git_again$ git log
+commit c5126547143822c033c74c803b61f8a13b5281db (HEAD -> master)
+Author: navin <navinsinghmed@gmail.com>
+Date:   Wed Jan 25 02:19:20 2023 -0500
+
+    adding third.txt
+navin@DESKTOP-FRHHJSP:~/learn_git_again$ touch fourth.txt
+navin@DESKTOP-FRHHJSP:~/learn_git_again$ git add fourth.txt
+navin@DESKTOP-FRHHJSP:~/learn_git_again$ git commit -m "adding fourth.txt"
+[master fe09d2e] adding fourth.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+navin@DESKTOP-FRHHJSP:~/learn_git_again$ rm third.txt
+navin@DESKTOP-FRHHJSP:~/learn_git_again$ git add third.txt
+navin@DESKTOP-FRHHJSP:~/learn_git_again$ git commit -m "removing third.txt"
+[master 572c78f] removing third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+navin@DESKTOP-FRHHJSP:~/learn_git_again$ git log
+commit 572c78f192f5ba66e675220ca14f2ed6226a46b3 (HEAD -> master)
+Author: navin <navinsinghmed@gmail.com>
+Date:   Wed Jan 25 02:20:37 2023 -0500
+
+    removing third.txt
+
+commit fe09d2efc890723f2a22acc7da4823dfad024d03
+Author: navin <navinsinghmed@gmail.com>
+Date:   Wed Jan 25 02:20:07 2023 -0500
+
+    adding fourth.txt
+
+commit c5126547143822c033c74c803b61f8a13b5281db
+Author: navin <navinsinghmed@gmail.com>
+Date:   Wed Jan 25 02:19:20 2023 -0500
+
+    adding third.txt
+navin@DESKTOP-FRHHJSP:~/learn_git_again$ git config --global core.pager "cat"
+navin@DESKTOP-FRHHJSP:~/learn_git_again$ git config --global --list
+user.name=navin
+user.email=navinsinghmed@gmail.com
+core.pager=cat
+navin@DESKTOP-FRHHJSP:~/learn_git_again$
