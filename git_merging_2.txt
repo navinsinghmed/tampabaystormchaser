@@ -1,0 +1,73 @@
+navin@DESKTOP-FRHHJSP:~$ ls
+2017_Hurricanes      2020_Hurricanes  2021_Hurricanes  Irma142.txt        hurricanes      learn_git_again
+2020_Big_Hurricanes  2021             Hurricanes       hurricane_man.txt  index_git.html  walrus
+navin@DESKTOP-FRHHJSP:~$ git checkout
+M       index_git.html
+navin@DESKTOP-FRHHJSP:~$ ls
+2017_Hurricanes      2020_Hurricanes  2021_Hurricanes  Irma142.txt        hurricanes      learn_git_again
+2020_Big_Hurricanes  2021             Hurricanes       hurricane_man.txt  index_git.html  walrus
+navin@DESKTOP-FRHHJSP:~$ mkdir git_merge_test_exercise
+navin@DESKTOP-FRHHJSP:~$ git status
+On branch wacko_cyclone_2023
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index_git.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .bash_history
+        .bash_logout
+        .bashrc
+        .gitconfig
+        .lesshst
+        .motd_shown
+        .profile
+        .vscode-server/
+        .vscode/
+        .wget-hsts
+        2017_Hurricanes/
+        2020_Big_Hurricanes/
+        2020_Hurricanes/
+        Irma142.txt
+        hurricane_man.txt
+        learn_git_again/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+navin@DESKTOP-FRHHJSP:~$ cd git_merge_test_exercise
+navin@DESKTOP-FRHHJSP:~/git_merge_test_exercise$ git init .
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in /home/navin/git_merge_test_exercise/.git/
+navin@DESKTOP-FRHHJSP:~/git_merge_test_exercise$ echo "this is merge fun" > mergeMe.txt
+navin@DESKTOP-FRHHJSP:~/git_merge_test_exercise$ git add mergeMe.txt
+navin@DESKTOP-FRHHJSP:~/git_merge_test_exercise$ git commit -am"commit the silly merge"
+[master (root-commit) 0c49f64] commit the silly merge
+ 1 file changed, 1 insertion(+)
+ create mode 100644 mergeMe.txt
+navin@DESKTOP-FRHHJSP:~/git_merge_test_exercise$ git checkout -b new_branch_merge
+Switched to a new branch 'new_branch_merge'
+navin@DESKTOP-FRHHJSP:~/git_merge_test_exercise$ echo "new merge content" > mergeMe.txt
+navin@DESKTOP-FRHHJSP:~/git_merge_test_exercise$ git commit -am"edit my silly merge git experiment conflict!"
+[new_branch_merge 17af366] edit my silly merge git experiment conflict!
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+navin@DESKTOP-FRHHJSP:~/git_merge_test_exercise$ echo "I am the walrus" > walrus100.txt
+navin@DESKTOP-FRHHJSP:~/git_merge_test_exercise$ git add walrus.txt
+fatal: pathspec 'walrus.txt' did not match any files
+navin@DESKTOP-FRHHJSP:~/git_merge_test_exercise$ git add walrus100.txt
+navin@DESKTOP-FRHHJSP:~/git_merge_test_exercise$ git commit -am"commit the silly walrus"
+[new_branch_merge 2a2900b] commit the silly walrus
+ 1 file changed, 1 insertion(+)
+ create mode 100644 walrus100.txt
+navin@DESKTOP-FRHHJSP:~/git_merge_test_exercise$ git status
+On branch new_branch_merge
+nothing to commit, working tree clean
+navin@DESKTOP-FRHHJSP:~/git_merge_test_exercise$
