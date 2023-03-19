@@ -487,3 +487,115 @@ cd ..
 pwd
 ls
 ipython
+ls
+python3 -m venv venv
+source venv/bin/activate
+pip3 install flask
+touch flask.oy
+touch flask.py
+open flask.py
+flask run
+ls
+flask run
+%run flask.py
+touch app.py
+flask run
+touch flask2.py
+FLASK_APP=flask2.py flask run
+ls
+FLASK_APP=flask2.py flask run
+FLASK_ENV=development flask run
+export FLASK_ENV=development
+cd ~
+ls
+ls -a
+open .bash_profile
+ls
+%run app.py
+flask --app app run
+sudo apt install python3-flask
+flask --app app run
+export FLASK_APP=sample
+export FLASK_ENV=development
+flask run
+set FLASK_APP=app
+run app
+run flask
+%run app.py
+-m venv flask-techsolutionz
+ls
+flask-techsolutionz/bin/activate
+Install IDLE
+install IDLE
+ls
+pip --version
+import flask
+py -m pip install flask
+ls
+.bash_profile
+ls
+cd venv
+ls
+flask
+export FLASK_ENV=development
+export FLASK_APP=app.py
+flask run
+%run app.py
+server link
+server
+link
+link --help
+url
+urlk
+curl
+curl app.py
+netsh http add iplisten 127.0.0.1
+127.0.0.1 localhot
+127.0.0.1 localhost
+ls
+python3 -m flask run
+cd..
+ls
+cd
+ls
+export FLASK_APP=app.py
+set FLASK_APP=appmpy
+set FLASK_APP=app.py
+export FLASK_ENV=development
+set FLASK_DEBUG = True
+flask run
+'/hello'
+say_hello() '/hello'
+/hello
+app.py
+%run app.py
+app.run(host='127.0.0.1',port=8000,debug=True)
+pwd
+ls
+flask run
+ipython
+python3 -m venv venv
+source venv/bin/activate
+pip3 install flask
+flask run
+python3 -m venv venv
+source venv/bin/activate
+flask run
+curl http://127.0.0.1:5000/post
+curl -X POST http://12.0.0.1:5000/post
+flask run
+curl -X POST http://127.0.0.1:5000/post
+flask run
+python3 -m venv venv
+source venv/bin/activate
+flask run
+walrus
+flask run
+python3 -m venv venv
+source venv/bin/activate
+flask run
+cd ~
+ls
+code .profile
+ls
+close
