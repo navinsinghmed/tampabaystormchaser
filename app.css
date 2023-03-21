@@ -1,0 +1,25 @@
+h1 {
+    color: purple;
+}
+
+.navbar {
+    background-color: aqua;
+}
+
+#content {
+    margin: 40px;
+}
+
+.navbar a {
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+    float: left;
+    color:blueviolet;
+    background-color: aquamarine;
+}
+
+.navbar a:hover {
+    background-color: beige;
+    color:blue;
+}

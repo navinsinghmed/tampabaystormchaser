@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Lucky Number Page{% endblock %}
+
+{% block content %}
+    
+    
+    <h1>This is the lucky page! I love storms and walruses!</h1>
+    <h1>Your lucky number is: {{lucky_num}}</h1>
+    <p>{{msg}}</p>
+    {% if lucky_num < 16 %}
+    <h2>That's one of my favorite numbers</h2>
+    {% else %}
+    <h2>Not a favorite number!!</h2>
+    {% endif %}
+    <p>Thank you for browsing!</p>
+    
+{% endblock %}
