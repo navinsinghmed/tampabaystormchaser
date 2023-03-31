@@ -3,30 +3,51 @@
 Answer the following questions below:
 
 - What are important differences between Python and JavaScript?
+Python uses spaces and indents for blocks of code while javascript uses braces, and python has a lot more expansive libraries like flask and django.
+Python focuses on back-end development, but javascript can also do front end by interacting with html and css.
 
 - Given a dictionary like ``{"a": 1, "b": 2}``: , list two ways you
   can try to get a missing key (like "c") *without* your programming
   crashing.
+ code: get(key,val) on an if statement, and if false: print a message saying key not found, or setdefault(key,val), and if not true- set it to a 
+ standard default value: dictionary_hurricane("no cyclone", "storm system not found")
 
 - What is a unit test?
+Unit tests test one section of code such as a single class or function.
 
 - What is an integration test?
+Integration tests test over multiple classes, functions, methods, or files.
 
 - What is the role of web application framework, like Flask?
+Flask connects the python code to javascript, html, css, for front end web page building
 
 - You can pass information to Flask either as a parameter in a route URL
   (like '/foods/pretzel') or using a URL query param (like
   'foods?type=pretzel'). How might you choose which one is a better fit
   for an application?
+  You must define the route first for the route URL way, and then for the param- the parameter is passed to type variable so you don't have to define the route 
+  first.
 
 - How do you collect data from a URL placeholder parameter using Flask?
+Use app.route in the Flask App, and a def function: 
+@app.route('/hurricanes/<list>')
+    def get_hurricane_list(list):
 
 - How do you collect data from the query string using Flask?
+Use request.args.get("data")
 
 - How do you collect data from the body of the request using Flask?
+from flask import request, then use a post request
 
 - What is a cookie and what kinds of things are they commonly used for?
+text files holding data sent between client and server
 
 - What is the session object in Flask?
+Sessions are erased unlike cookies at the end of a browser session, but store key/value data in dictionary
 
 - What does Flask's `jsonify()` do?
+Allows you to respond to the page in json form: 
+from flask import jsonify
+@app.route('/get_hurricane_list')
+def get_hurricane_list():
+	return jsonify(cyclone_name=cyclone.cyclone_name, max_wind=cyclone.max_wind, category=cyclone.hurricane_category)
